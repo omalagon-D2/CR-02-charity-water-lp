@@ -1,47 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charity Water Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charity:Water Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #eae5d9;
+      color: #ffffff;
+    }
+
+    .header {
+      background-color: #fff9e6;
+      display: flex;
+      align-items: center;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      height: 50px;
+      margin-right: 15px;
+    }
+
+    .brand {
+      font-size: 1.5em;
+      color: #333333;
+      font-weight: bold;
+    }
+
+    .main {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #72a2b0;
+      padding: 60px 40px;
+    }
+
+    .content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .content h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .content p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    .cta-button {
+      background-color: #002855;
+      color: #ffffff;
+      padding: 15px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      /* Add a simple shadow to make the button stand out */
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Add a hover effect for the button */
+    .cta-button:hover {
+      background-color: #004080; /* Slightly lighter blue on hover */
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.3); /* Stronger shadow on hover */
+    }
+
+    .image-container {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .main-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .content, .image-container {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Hero Section: This is the main banner at the top of the page -->
-    <section class="hero">
-        <!-- Main headline -->
-        <h1>Clean Water for Everyone</h1>
-        <!-- Subheadline -->
-        <p>Join us in bringing safe, clean water to communities in need.</p>
-    </section>
+  <header class="header">
+    <!-- Replace 'logo.png' with your actual logo file -->
+    <img src="img/cw_logo-2.png" alt="Charity:Water Logo" class="logo" />
+  </header>
 
-    <!-- Story Section: This tells the story of the nonprofit -->
-    <section class="story">
-        <h2>Our Story</h2>
-        <p>
-         
-    </section>
-
-    <!-- Real-World Impact Story Section -->
-    <section class="impact-story">
-        <!-- Section headline -->
-        <h2>Real Impact: Meet Amina</h2>
-        <!-- Container for image and text -->
-        <div class="impact-content">
-            <!-- Impact image -->
-            <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Amina smiling with clean water" class="impact-image">
-            <!-- Impact story text -->
-            <p>
-                Amina used to walk miles every day to collect water for her family. Thanks to your support, her village now has a clean water well. Amina can go to school and her family is healthier and happier.
-            </p>
-        </div>
-    </section>
-
-    <!-- Call-to-Action Section: This encourages visitors to take action -->
-    <section class="call-to-action">
-        <h2>Make a Difference</h2>
-        <p>Your support can help save lives. Every donation brings us closer to a world with clean water for all.</p>
-        <a href="#" class="donate-button">Donate Now</a>
-    </section>
+  <main class="main">
+    <div class="content">
+      <h1>Your $20 can make a difference by bringing clean water to someone for a year.</h1>
+      <p>One gift. One year of water. One story you’ll actually see.</p>
+      <a href="#" class="cta-button">Give Water. Give Life.</a>
+    </div>
+    <div class="image-container">
+      <!-- Replace 'photo.jpg' with your actual image -->
+      <img src="img/Zimbabwe_2022_CG-7493.jpg" alt="Happy person with clean water" class="main-image" />
+    </div>
+  </main>
 </body>
 </html>
