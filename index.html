@@ -16,48 +16,51 @@
       background-color: #fff9e6;
       display: flex;
       align-items: center;
-      padding: 20px 40px;
+      padding: 15px 10px; /* Less padding for small screens */
     }
 
     .logo {
-      height: 50px;
-      margin-right: 15px;
+      height: 40px; /* Smaller logo for mobile */
+      margin-right: 10px;
+      max-width: 100%; /* Make logo responsive */
+      height: auto;
     }
 
     .brand {
-      font-size: 1.5em;
+      font-size: 1.2em;
       color: #333333;
       font-weight: bold;
     }
 
     .main {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column; /* Stack content on small screens */
       background-color: #72a2b0;
-      padding: 60px 40px;
+      padding: 30px 10px; /* Less padding for small screens */
     }
 
     .content {
       flex: 1;
-      min-width: 300px;
+      min-width: 0;
+      margin-bottom: 20px;
     }
 
     .content h1 {
-      font-size: 2em;
-      margin-bottom: 20px;
+      font-size: 1.3em; /* Smaller heading for mobile */
+      margin-bottom: 15px;
       color: #ffffff;
     }
 
     .content p {
-      font-size: 1.2em;
-      margin-bottom: 30px;
+      font-size: 1em; /* Smaller text for mobile */
+      margin-bottom: 20px;
       color: #e0e0e0;
     }
 
     .cta-button {
       background-color: #002855;
       color: #ffffff;
-      padding: 15px 25px;
+      padding: 12px 18px;
       font-size: 1em;
       border: none;
       border-radius: 5px;
@@ -75,25 +78,52 @@
 
     .image-container {
       flex: 1;
-      min-width: 300px;
+      min-width: 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin-bottom: 20px;
     }
 
     .main-image {
-      max-width: 100%;
-      height: auto;
+      max-width: 100%; /* Make image responsive */
+      height: auto;    /* Keep image aspect ratio */
       border-radius: 10px;
+      display: block;
     }
 
-    @media (max-width: 768px) {
-      .main {
-        flex-direction: column;
+    /* Media query for screens 600px and wider */
+    @media (min-width: 600px) {
+      .header {
+        padding: 20px 40px; /* More padding on larger screens */
       }
-
+      .logo {
+        height: 50px; /* Larger logo */
+      }
+      .main {
+        flex-direction: row; /* Side by side layout */
+        flex-wrap: wrap;
+        padding: 60px 40px; /* More padding */
+      }
       .content, .image-container {
-        margin-bottom: 20px;
+        min-width: 300px;
+        margin-bottom: 0;
+      }
+      .content h1 {
+        font-size: 2em; /* Larger heading */
+      }
+      .content p {
+        font-size: 1.2em; /* Larger text */
+      }
+      .cta-button {
+        padding: 15px 25px; /* Larger button */
+      }
+    }
+
+    /* Media query for screens 768px and wider (optional for extra spacing) */
+    @media (min-width: 768px) {
+      .main {
+        padding: 80px 80px;
       }
     }
   </style>
